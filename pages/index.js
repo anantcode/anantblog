@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import Head from "next/head";
 
 export default function Home({ posts }) {
@@ -13,6 +15,10 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
+  // Get files from the posts directory.
+  const files = fs.readdirSync(path.join("posts"));
+  console.log(files);
+
   return {
     props: { posts: "The Posts" }, //test
   };
