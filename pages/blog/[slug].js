@@ -1,5 +1,8 @@
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
+import marked from "marked";
+import Link from "next/link";
 
 export default function PostPage() {
   return <div>post</div>;
@@ -23,6 +26,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   console.log(slug);
+
+  const markdownWithMeta = fs.readFileSync(
+    path.join("posts", slug + ".md"),
+    "utf-8"
+  );
+
+  const { data: frontmatter, content } = matter(markdownWithMeta);
+  console.log("FRONTMATTER:\n" + JSON.stringify(frontmatter));
+  console.log("CONTENT:\n" + content);
+
   return {
     props: {},
   };
