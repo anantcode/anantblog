@@ -4,7 +4,7 @@ export default function Post({ post }) {
   return (
     <div className="card">
       <img src={post.frontmatter.cover_image} width={250} height={250} />
-      <div className="post-date">Posted on {post.frontmatter.date}</div>
+      <div className="post-date">{post.frontmatter.date}</div>
       <h3>{post.frontmatter.title}</h3>
       <p>{post.frontmatter.excerpt}</p>
       <Link href={`/blog/${post.slug}`}>
