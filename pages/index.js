@@ -45,6 +45,6 @@ export async function getStaticProps() {
   console.log(posts);
 
   return {
-    props: { posts: "The Posts" }, //test
+    props: { posts: posts },
   };
 }
