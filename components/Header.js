@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <div className="container">
         <Link href="/">
-          <h2>Dev Deck</h2>
+          <h1>Dev Deck</h1>
         </Link>
       </div>
     </header>
