@@ -10,7 +10,11 @@ export default function Home({ posts }) {
       <Head>
         <title>Dev Blog</title>
       </Head>
-      <h2>Hello Anant!!</h2>
+      <div className="posts">
+        {posts.map((post, index) => (
+          <h3>{post.frontmatter.title}</h3>
+        ))}
+      </div>
     </div>
   );
 }
