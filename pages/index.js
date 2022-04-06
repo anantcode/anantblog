@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import Head from "next/head";
 
 export default function Home({ posts }) {
@@ -32,8 +33,12 @@ export async function getStaticProps() {
 
     console.log(markdownWithMeta);
 
+    // destructring - renaming the data to frontmatter.
+    const { data: frontmatter } = matter(markdownWithMeta);
+
     return {
       slug,
+      frontmatter,
     };
   });
 
