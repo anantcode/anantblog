@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import marked from "marked";
 import Link from "next/link";
+import { marked } from "marked";
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
@@ -24,6 +24,7 @@ export default function PostPage({
           to use an attribute called dangerouslySetInnerHTML. 
 
           It is set with double curly braces, like {{__html: }}*/}
+          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
       </div>
     </>
