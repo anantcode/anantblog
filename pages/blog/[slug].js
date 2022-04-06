@@ -9,12 +9,7 @@ export default function PostPage({
   slug,
   content,
 }) {
-  console.log("In PostPage:\n");
-  console.log(`${title} - ${date} - ${cover_image}`);
-  console.log(slug);
-  console.log(content);
-
-  return <div>post</div>;
+  return <div>{title}</div>;
 }
 
 export async function getStaticPaths() {
