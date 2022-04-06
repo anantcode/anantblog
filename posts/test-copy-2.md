@@ -7,4 +7,4 @@ cover_image: "/images/posts/img2.jpg"
 
 ## Heading
 
-I am text
+I am text 2
