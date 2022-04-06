@@ -4,7 +4,12 @@ import matter from "gray-matter";
 import marked from "marked";
 import Link from "next/link";
 
-export default function PostPage() {
+export default function PostPage({ frontmatter, slug, content }) {
+  console.log("In PostPage:\n");
+  console.log(frontmatter);
+  console.log(slug);
+  console.log(content);
+
   return <div>post</div>;
 }
 
@@ -33,10 +38,12 @@ export async function getStaticProps({ params: { slug } }) {
   );
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
-  console.log("FRONTMATTER:\n" + JSON.stringify(frontmatter));
-  console.log("CONTENT:\n" + content);
 
   return {
-    props: {},
+    props: {
+      frontmatter,
+      slug,
+      content,
+    },
   };
 }
