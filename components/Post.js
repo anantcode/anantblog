@@ -4,6 +4,7 @@ export default function Post({ post }) {
   return (
     <div class="card">
       <img src={post.frontmatter.cover_image} />
+      <div className="post-date">Posted on {post.frontmatter.date}</div>
     </div>
   );
 }
