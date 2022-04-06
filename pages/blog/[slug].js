@@ -14,10 +14,18 @@ export default function PostPage({
       <Link href="/">
         <a className="btn btn-back">Go Back</a>
       </Link>
-      <h1 className="post-title">{title}</h1>
-      <div className="postdate">Posted on {date}</div>
-      <img src={cover_image} alt="" />
-      <div className="post-body"></div>
+      <div className="card card-page">
+        <h1 className="post-title">{title}</h1>
+        <div className="postdate">Posted on {date}</div>
+        <img src={cover_image} alt="" />
+        <div className="post-body">
+          {/* will use marked here - will insert the MD HTML here 
+          Basicall inserting HTML - when we do that within JSX we have
+          to use an attribute called dangerouslySetInnerHTML. 
+
+          It is set with double curly braces, like {{__html: }}*/}
+        </div>
+      </div>
     </>
   );
 }
