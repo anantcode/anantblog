@@ -14,6 +14,10 @@ export default function PostPage({
       <Link href="/">
         <a className="btn btn-back">Go Back</a>
       </Link>
+      <h1 className="post-title">{title}</h1>
+      <div className="postdate">Posted on {date}</div>
+      <img src={cover_image} alt="" />
+      <div className="post-body"></div>
     </>
   );
 }
