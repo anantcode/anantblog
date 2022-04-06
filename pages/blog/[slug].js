@@ -9,7 +9,13 @@ export default function PostPage({
   slug,
   content,
 }) {
-  return <div>{title}</div>;
+  return (
+    <>
+      <Link href="/">
+        <a className="btn btn-back">Go Back</a>
+      </Link>
+    </>
+  );
 }
 
 export async function getStaticPaths() {
