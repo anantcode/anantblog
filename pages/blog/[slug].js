@@ -17,7 +17,7 @@ export default function PostPage({
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
         <div className="postdate">Posted on {date}</div>
-        <img src={cover_image} alt="" />
+        <img src={cover_image} alt="post-image" />
         <div className="post-body">
           {/* will use marked here - will insert the MD HTML here 
           Basicall inserting HTML - when we do that within JSX we have

@@ -17,7 +17,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: rgb(4, 133, 246);
 }
 
 img {
@@ -38,7 +38,7 @@ header a {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 1024px;
   margin: auto;
   overflow: auto;
   padding: 0 10px;
@@ -80,12 +80,14 @@ header a {
 
 .card {
   padding: 15px;
+  margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-page {
   padding: 15px 30px;
+  margin-bottom: 50px;
 }
 
 .post-title {
@@ -100,17 +102,28 @@ header a {
 
 .post-body ul,
 ol {
-  font-size: 110%;
-  line-height: 2.3;
-  font-weight: bold;
+  font-size: 100%;
+  line-height: 2;
   margin: 10px 0;
+  padding-left: 25px;
 }
 
-.post-body pre {
-  background: #f4f4f4;
-  padding: 20px;
-  margin: 20px 0;
-  line-height: 2.3;
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2,
+h3 {
+  padding-top: 20px;
+}
+
+.postdate {
+  margin-bottom: 5px;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 @media (max-width: 500px) {
