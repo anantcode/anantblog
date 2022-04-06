@@ -64,4 +64,4 @@ Use free templates, if you are not a designer.
 
 I decided to create a Next.js and Markdown based blog, because I really like Markdown and Next.js and wanted some hands-on with Next.js. More details in upcoming posts.
 
-> **Update:** This blog was originally written in Markdown and published later on the now Live [blog](https://anantblog.vercel.app/)!
+> **Update:** This blog was originally written in Markdown and published later on the now Live [blog](https://anant.vercel.app/)!
