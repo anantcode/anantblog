@@ -4,9 +4,13 @@ import matter from "gray-matter";
 import marked from "marked";
 import Link from "next/link";
 
-export default function PostPage({ frontmatter, slug, content }) {
+export default function PostPage({
+  frontmatter: { title, date, cover_image },
+  slug,
+  content,
+}) {
   console.log("In PostPage:\n");
-  console.log(frontmatter);
+  console.log(`${title} - ${date} - ${cover_image}`);
   console.log(slug);
   console.log(content);
 
