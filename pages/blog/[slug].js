@@ -21,7 +21,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params: { slug } }) {
+  console.log(slug);
   return {
     props: {},
   };
