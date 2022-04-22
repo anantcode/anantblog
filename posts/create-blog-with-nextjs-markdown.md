@@ -1,8 +1,8 @@
 ---
 title: "Creating Blog with Next.js and Markdown"
 date: "April 7 2022"
-excerpt: "How to create a blog with Next.js and Markdown."
-cover_image: "/images/posts/img2.jpg"
+cover_image: "/images/posts/nextjs-markdown/nextjs-markdown.png"
+excerpt: "Programming Blog can be one of the best first projects for any programmer. Find out how."
 ---
 
 Thanks to Traversy Media for [content](https://www.youtube.com/watch?v=MrjeefD8sac) that is referenced here.
@@ -29,7 +29,7 @@ wait  - compiling...
 event - compiled client and server successfully in 9s (125 modules)
 ```
 
-![Untitled](Creating%20B%200b530/Untitled.png)
+![Untitled](/images/posts/Creating0b530/Untitled.png)
 
 ### Deleting the unwanted:
 
@@ -38,7 +38,7 @@ event - compiled client and server successfully in 9s (125 modules)
 - `index.js` is home page
 - Each page in Next.js is a functional component, example:
 
-![Untitled](Creating%20B%200b530/Untitled%201.png)
+![Untitled](/images/posts/Creating0b530/Untitled%201.png)
 
 `Home` here is a functional component of react.
 
@@ -46,15 +46,15 @@ Anytime you create a component in `pages` folder like say `about.js` , that will
 
 ### Remove some unwanted boilerplate
 
-![Untitled](Creating%20B%200b530/Untitled%202.png)
+![Untitled](/images/posts/Creating0b530/Untitled%202.png)
 
 Keep `Head` import because we need the title of page.
 
-![Untitled](Creating%20B%200b530/Untitled%203.png)
+![Untitled](/images/posts/Creating0b530/Untitled%203.png)
 
 Delete this `class` because we will have a single global CSS file.
 
-![Untitled](Creating%20B%200b530/Untitled%204.png)
+![Untitled](/images/posts/Creating0b530/Untitled%204.png)
 
 Get rid of `main` tag and `footer` tag
 
@@ -62,7 +62,7 @@ Change `<title>` etc.
 
 Final is very basic:
 
-![Untitled](Creating%20B%200b530/Untitled%205.png)
+![Untitled](/images/posts/Creating0b530/Untitled%205.png)
 
 ### Add a global css
 
@@ -82,7 +82,7 @@ Add a div with className “container”
 
 ---
 
-![Untitled](Creating%20B%200b530/Untitled%206.png)
+![Untitled](/images/posts/Creating0b530/Untitled%206.png)
 
 Nothing’s going to show up now, because we have not added it yet.
 
@@ -90,11 +90,11 @@ Now go to `_app.js` and import Header
 
 and add the `Header` in `_app.js`
 
-![Untitled](Creating%20B%200b530/Untitled%207.png)
+![Untitled](/images/posts/Creating0b530/Untitled%207.png)
 
 Add a `<main>` tag with “container” class, and move the `Component` into the `main` tag
 
-![Untitled](Creating%20B%200b530/Untitled%208.png)
+![Untitled](/images/posts/Creating0b530/Untitled%208.png)
 
 ### Create a Markdown File
 
@@ -112,7 +112,7 @@ also create `public/images/posts` to store images of your post.
 
 In the test md file,
 
-![Untitled](Creating%20B%200b530/Untitled%209.png)
+![Untitled](/images/posts/Creating0b530/Untitled%209.png)
 
 ### Get post on homepage from md:
 
@@ -131,9 +131,9 @@ export async function getStaticProps() {
 
 `getStaticProps()` makes it available in the main component: (here in Home functional component)
 
-![Untitled](Creating%20B%200b530/Untitled%2010.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2010.png)
 
-![Untitled](Creating%20B%200b530/Untitled%2011.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2011.png)
 
 ### Import `fs`
 
@@ -145,18 +145,18 @@ import fs from "fs";
 
 You will see error by Next
 
-![Untitled](Creating%20B%200b530/Untitled%2012.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2012.png)
 
 Reason for the error is - `fs` is not something you can import on the client side. `fs` is the filesystem node.js module and we are trying to import it in client side code (react code).
 
 **However** next.js is smart enough to know that **if you use the fs module** inside the `getStaticProps()` which will run on Server Side, then fs will work.
 
-![Untitled](Creating%20B%200b530/Untitled%2013.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2013.png)
 
 No more errors! :)
 Even if `import fs from "fs"` is still in code, `fs` was used only inside getStaticProps() function and hence the error is no longer shown by Next.
 
-![Untitled](Creating%20B%200b530/Untitled%2014.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2014.png)
 
 **1** = array of all files (names?) on posts directory.
 
@@ -170,9 +170,9 @@ Even if `import fs from "fs"` is still in code, `fs` was used only inside getSta
 
 (For now there is only 1 [test.md](http://test.md) - its slug)
 
-![Untitled](Creating%20B%200b530/Untitled%2015.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2015.png)
 
-![Untitled](Creating%20B%200b530/Untitled%2016.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2016.png)
 
 ### Use gray-matter
 
@@ -192,7 +192,7 @@ return {
 };
 ```
 
-![Untitled](Creating%20B%200b530/Untitled%2017.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2017.png)
 
 Now return the `posts` instead of test string, from `getStaticProps()`
 
@@ -204,29 +204,29 @@ return {
 
 we are logging it in component start
 
-![Untitled](Creating%20B%200b530/Untitled%2018.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2018.png)
 
 So for log at line 7, we see:
 
-![Untitled](Creating%20B%200b530/Untitled%2019.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2019.png)
 
 why array? because its result of `map()`
 
 Also array size = no. of files. We have only 1 `test.md` :
 
-![Untitled](Creating%20B%200b530/Untitled%2020.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2020.png)
 
 > Notice that we dont have the body of markdown - we dont need it because we will not put it in `index.js` but will do in another component.
 
-![Untitled](Creating%20B%200b530/Untitled%2021.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2021.png)
 
 Add some more .md files see them getting displayed.
 
-![Untitled](Creating%20B%200b530/Untitled%2022.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2022.png)
 
 ### Create a component for post, instead of the `h3`
 
-![Untitled](Creating%20B%200b530/Untitled%2023.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2023.png)
 
 Added links to Post component
 
@@ -294,7 +294,7 @@ export async function getStaticProps() {
 
 paths logged just before return is
 
-![Untitled](Creating%20B%200b530/Untitled%2024.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2024.png)
 
 ### Since we are returning `paths` (it has the slugs we needed) from `getStaticPaths` **we can access that in the other function `getStaticProps`**
 
@@ -309,23 +309,23 @@ export async function getStaticProps({ params: { slug } }) {
 
 We are able to see the log : (when page 3 was refreshed/loaded) :
 
-![Untitled](Creating%20B%200b530/Untitled%2025.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2025.png)
 
 So we now have direct access to whatever is the slug is, inside `getStaticProps`
 
 ### Now work on content
 
-![Untitled](Creating%20B%200b530/Untitled%2026.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2026.png)
 
 To see what exactly is frontmatter, `JSON.stringify` (we have see in past for the list page)
 
-![Untitled](Creating%20B%200b530/Untitled%2027.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2027.png)
 
-![Untitled](Creating%20B%200b530/Untitled%2028.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2028.png)
 
-![Untitled](Creating%20B%200b530/Untitled%2029.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2029.png)
 
-![Untitled](Creating%20B%200b530/Untitled%2030.png)
+![Untitled](/images/posts/Creating0b530/Untitled%2030.png)
 
 > Btw `<> </>` is called an **empty fragment**
 
